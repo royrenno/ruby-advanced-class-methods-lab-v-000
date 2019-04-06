@@ -40,7 +40,7 @@ def self.alphabetical
   self.all.sort_by{|s| s.name}
 end
 
-def.self.new_from_filename(filename)
+def self.new_from_filename(filename)
   parts = filename.split(" - ")
   artist.name = parts[0]
   song.name = parts[1].gsub(".mp3", "")
