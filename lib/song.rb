@@ -23,3 +23,9 @@ class Song
     song = self.create
     song
   end
+  def self.find_by_name(song.name)
+    self.all.detect{|s|s.name == song.name}
+  end
+  def self.find_or_create_by_name(song.name)
+    self.find_by_name(song.name)|| self.create_by_name(song.name)
+  end
